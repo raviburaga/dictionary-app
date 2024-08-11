@@ -242,21 +242,6 @@ function App() {
               </div>
             )}
 
-            {entry.def &&
-              entry.def.length > 0 &&
-              entry.def[0].sseq &&
-              entry.def[0].sseq.length > 0 && (
-                <div className="mb-2">
-                  <strong>Usage Examples:</strong>
-                  <ul className="list-disc list-inside">
-                    {entry.def[0].sseq[0][0][1].dt
-                      .filter((dt) => dt[0] && dt[0].t === 'text')
-                      .map((dt, idx) => (
-                        <li key={idx}>{cleanText(dt[0].t)}</li>
-                      ))}
-                  </ul>
-                </div>
-              )}
           </div>
         </div>
       )}
